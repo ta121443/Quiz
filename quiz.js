@@ -12,7 +12,7 @@ const quiz = [
         answers : ['2回', '3回', '4回', '5回'],
         correct : '5回'
     }, {
-        question : 'あまりいず御用達の宿の名前は？',
+        question : 'あまりぃず御用達の宿の名前は？',
         answers : ['白木荘', 'ホテル山田', 'ホテル桃山', '城之内荘'],
         correct : '城之内荘'
     }, {
@@ -54,8 +54,7 @@ const clickHandler = (e) => {
         setupQuiz();
     } else {
         let accuracy = score / quizLength;
-        window.alert('あなたの正解数は、' + score + ' / ' + quizLength + 'です！\n' + 
-        'あなたの正答率は、' + accuracy * 100 + '%です！');
+        window.alert('あなたの得点は、' + accuracy * 100 + '点です！');
     }
 }
 let hundleIndex = 0;
