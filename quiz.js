@@ -1,24 +1,24 @@
 const quiz = [
     {
-        question : 'Ç»ÇÒÇÃÉTÅ[ÉNÉãÅH',
-        answers : ['ÉeÉjÉX', 'ÉJÉoÉfÉB', 'ÉZÉpÉ^ÉNÉçÅ[', 'ÉÇÉãÉbÉN'],
-        correct : 'ÉeÉjÉX'
+        question : '„Å™„Çì„ÅÆ„Çµ„Éº„ÇØ„É´Ôºü',
+        answers : ['„ÉÜ„Éã„Çπ', '„Ç´„Éê„Éá„Ç£', '„Çª„Éë„Çø„ÇØ„É≠„Éº', '„É¢„É´„ÉÉ„ÇØ'],
+        correct : '„ÉÜ„Éã„Çπ'
     }, {
-        question : 'êlêîÇÕÅH',
-        answers : ['30êl', '50êl', '100êl', '200êl'],
-        correct : '200êl'
+        question : '‰∫∫Êï∞„ÅØÔºü',
+        answers : ['30‰∫∫', '50‰∫∫', '100‰∫∫', '200‰∫∫'],
+        correct : '200‰∫∫'
     }, {
-        question : 'àÍîNä‘Ç≈äJç√Ç≥ÇÍÇÈçáèhÇÃâÒêîÇÕÅH',
-        answers : ['2âÒ', '3âÒ', '4âÒ', '5âÒ'],
-        correct : '5âÒ'
+        question : '‰∏ÄÂπ¥Èñì„ÅßÈñãÂÇ¨„Åï„Çå„ÇãÂêàÂÆø„ÅÆÂõûÊï∞„ÅØÔºü',
+        answers : ['2Âõû', '3Âõû', '4Âõû', '5Âõû'],
+        correct : '5Âõû'
     }, {
-        question : 'Ç†Ç‹ÇËÇ¢Ç∏å‰ópíBÇÃèhÇÃñºëOÇÕÅH',
-        answers : ['îíñÿëë', 'ÉzÉeÉãéRìc', 'ÉzÉeÉãìçéR', 'èÈîVì‡ëë'],
-        correct : 'èÈîVì‡ëë'
+        question : '„ÅÇ„Åæ„Çä„ÅÑ„ÅöÂæ°Áî®ÈÅî„ÅÆÂÆø„ÅÆÂêçÂâç„ÅØÔºü',
+        answers : ['ÁôΩÊú®Ëçò', '„Éõ„ÉÜ„É´Â±±Áî∞', '„Éõ„ÉÜ„É´Ê°ÉÂ±±', 'Âüé‰πãÂÜÖËçò'],
+        correct : 'Âüé‰πãÂÜÖËçò'
     }, {
-        question : 'ì~çáèhÇ≈çsÇ§ÇÃÇÕÅH',
-        answers : ['ÉeÉjÉX', 'ÉXÉmÉ{', 'êÏâ∫ÇË', 'É{Å[ÉhÉQÅ[ÉÄ'],
-        correct : 'ÉXÉmÉ{'
+        question : 'ÂÜ¨ÂêàÂÆø„ÅßË°å„ÅÜ„ÅÆ„ÅØÔºü',
+        answers : ['„ÉÜ„Éã„Çπ', '„Çπ„Éé„Éú', 'Â∑ù‰∏ã„Çä', '„Éú„Éº„Éâ„Ç≤„Éº„É†'],
+        correct : '„Çπ„Éé„Éú'
     }
 
 ]
@@ -27,7 +27,7 @@ let quizIndex = 0;
 const quizLength = quiz.length;
 let score = 0;
 
-//ëIëéàïîï™ÇÃê›íË
+//ÈÅ∏ÊäûËÇ¢ÈÉ®ÂàÜ„ÅÆË®≠ÂÆö
 const $button = document.getElementsByTagName('button');
 let buttonLength = $button.length;
 
@@ -41,21 +41,21 @@ const setupQuiz = () =>{
 }
 setupQuiz();
 
-//ÉNÉäÉbÉNÇµÇΩÇ∆Ç´ÇÃê≥åÎîªíË
+//„ÇØ„É™„ÉÉ„ÇØ„Åó„Åü„Å®„Åç„ÅÆÊ≠£Ë™§Âà§ÂÆö
 const clickHandler = (e) => {
     if(e.target.textContent == quiz[quizIndex].correct) {
-        window.alert('ê≥â!');
+        window.alert('Ê≠£Ëß£!');
         score++;
     } else {
-        window.alert('ïsê≥âÅI');
+        window.alert('‰∏çÊ≠£Ëß£ÔºÅ');
     }
     quizIndex++;
     if(quizIndex < quizLength) {
         setupQuiz();
     } else {
         let accuracy = score / quizLength;
-        window.alert('Ç†Ç»ÇΩÇÃê≥âêîÇÕÅA' + score + ' / ' + quizLength + 'Ç≈Ç∑ÅI\n' + 
-        'Ç†Ç»ÇΩÇÃê≥ìöó¶ÇÕÅA' + accuracy * 100 + '%Ç≈Ç∑ÅI');
+        window.alert('„ÅÇ„Å™„Åü„ÅÆÊ≠£Ëß£Êï∞„ÅØ„ÄÅ' + score + ' / ' + quizLength + '„Åß„ÅôÔºÅ\n' + 
+        '„ÅÇ„Å™„Åü„ÅÆÊ≠£Á≠îÁéá„ÅØ„ÄÅ' + accuracy * 100 + '%„Åß„ÅôÔºÅ');
     }
 }
 let hundleIndex = 0;
